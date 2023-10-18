@@ -1,0 +1,11 @@
+D:\GitHub\examProg\examProg\examProg\bin\Debug\examProg.exe.config
+D:\GitHub\examProg\examProg\examProg\bin\Debug\examProg.exe
+D:\GitHub\examProg\examProg\examProg\bin\Debug\examProg.pdb
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.AssemblyReference.cache
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.frmConfig.resources
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.Properties.Resources.resources
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.GenerateResource.cache
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.CoreCompileInputs.cache
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.exe
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.pdb
