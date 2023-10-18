@@ -1,0 +1,6 @@
+D:\GitHub\examProg\examProg\dllExam\bin\Debug\dllExam.dll
+D:\GitHub\examProg\examProg\dllExam\bin\Debug\dllExam.pdb
+D:\GitHub\examProg\examProg\dllExam\obj\Debug\dllExam.csproj.AssemblyReference.cache
+D:\GitHub\examProg\examProg\dllExam\obj\Debug\dllExam.csproj.CoreCompileInputs.cache
+D:\GitHub\examProg\examProg\dllExam\obj\Debug\dllExam.dll
+D:\GitHub\examProg\examProg\dllExam\obj\Debug\dllExam.pdb

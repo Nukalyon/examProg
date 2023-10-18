@@ -10,3 +10,7 @@ D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.CoreCompileInputs
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.exe
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.pdb
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.frmJeu.resources
+D:\GitHub\examProg\examProg\examProg\bin\Debug\dllExam.dll
+D:\GitHub\examProg\examProg\examProg\bin\Debug\dllExam.pdb
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.frmInfos.resources
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.CopyComplete

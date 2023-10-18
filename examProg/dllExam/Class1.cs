@@ -15,6 +15,7 @@ namespace dllExam
         public byte nbBoxAidKit = 0;
         public byte nbBoxEmpty = 0;
         private byte hp = 0;
+        string error = "";
 
         public enum NoBoxUsed
         {
@@ -33,20 +34,27 @@ namespace dllExam
             {
                 //regarde si le nom est vide en retirant les espaces superflus et si la 
                 //longueur du text est inférieure à MAXCHARNAME
-                if (name.Length == 0 || name.Length >= MAXCHARNAME)
+                if (name.Length != 0 && name.Length <= MAXCHARNAME)
                 {
                     this.nomJoueur = name;
                 }
                 else
                 {
-                    throw new Exception("Erreur nom joueur !");
+                    if(name.Length == 0)
+                    {
+                        error += "Nom vide";
+                    }
+                    else
+                    {
+                        error += "Nom trop long";
+                    }
+                    throw new Exception(error);
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            
         }
 
         public void registerLife(string s)
@@ -70,18 +78,13 @@ namespace dllExam
             }
         }
 
-        public bool NbBoxes()
+        public byte NbBoxes()
         {
-            bool res = false;
             byte somme = 0;
             somme += nbBoxMonster;
             somme += nbBoxAidKit;
             somme += nbBoxEmpty;
-            if(somme == 5)
-            {
-                res = true;
-            }
-            return res;
+            return somme;
         }
     }
 

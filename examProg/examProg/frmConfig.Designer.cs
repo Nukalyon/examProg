@@ -38,12 +38,12 @@
             this.cmb_monsters = new System.Windows.Forms.ComboBox();
             this.cmb_boxAidKit = new System.Windows.Forms.ComboBox();
             this.cmb_boxVide = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gp_choices = new System.Windows.Forms.GroupBox();
             this.rdb_loseOneLife = new System.Windows.Forms.RadioButton();
             this.rdb_moitieEnergie = new System.Windows.Forms.RadioButton();
             this.btn_start = new System.Windows.Forms.Button();
             this.btn_quitter = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.gp_choices.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_nom
@@ -146,16 +146,16 @@
             this.cmb_boxVide.Size = new System.Drawing.Size(213, 21);
             this.cmb_boxVide.TabIndex = 9;
             // 
-            // groupBox1
+            // gp_choices
             // 
-            this.groupBox1.Controls.Add(this.rdb_loseOneLife);
-            this.groupBox1.Controls.Add(this.rdb_moitieEnergie);
-            this.groupBox1.Location = new System.Drawing.Point(15, 191);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 94);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Si le joeuur ne choisit pas de boîte avant le délai:";
+            this.gp_choices.Controls.Add(this.rdb_loseOneLife);
+            this.gp_choices.Controls.Add(this.rdb_moitieEnergie);
+            this.gp_choices.Location = new System.Drawing.Point(15, 191);
+            this.gp_choices.Name = "gp_choices";
+            this.gp_choices.Size = new System.Drawing.Size(408, 94);
+            this.gp_choices.TabIndex = 10;
+            this.gp_choices.TabStop = false;
+            this.gp_choices.Text = "Si le joeuur ne choisit pas de boîte avant le délai:";
             // 
             // rdb_loseOneLife
             // 
@@ -197,6 +197,7 @@
             this.btn_quitter.TabIndex = 12;
             this.btn_quitter.Text = "Quitter";
             this.btn_quitter.UseVisualStyleBackColor = true;
+            this.btn_quitter.Click += new System.EventHandler(this.btn_quitter_Click);
             // 
             // frmConfig
             // 
@@ -205,7 +206,7 @@
             this.ClientSize = new System.Drawing.Size(459, 355);
             this.Controls.Add(this.btn_quitter);
             this.Controls.Add(this.btn_start);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gp_choices);
             this.Controls.Add(this.cmb_boxVide);
             this.Controls.Add(this.cmb_boxAidKit);
             this.Controls.Add(this.cmb_monsters);
@@ -218,8 +219,8 @@
             this.Controls.Add(this.lbl_nom);
             this.Name = "frmConfig";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gp_choices.ResumeLayout(false);
+            this.gp_choices.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +238,7 @@
         private System.Windows.Forms.ComboBox cmb_monsters;
         private System.Windows.Forms.ComboBox cmb_boxAidKit;
         private System.Windows.Forms.ComboBox cmb_boxVide;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gp_choices;
         private System.Windows.Forms.RadioButton rdb_loseOneLife;
         private System.Windows.Forms.RadioButton rdb_moitieEnergie;
         private System.Windows.Forms.Button btn_start;

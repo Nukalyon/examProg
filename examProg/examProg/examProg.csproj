@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfos.Designer.cs">
+      <DependentUpon>frmInfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJeu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConfig.resx">
       <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfos.resx">
+      <DependentUpon>frmInfos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJeu.resx">
       <DependentUpon>frmJeu.cs</DependentUpon>
@@ -87,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dllExam\dllExam.csproj">
+      <Project>{CE63F733-BD5A-4529-9789-6599D579698C}</Project>
+      <Name>dllExam</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
