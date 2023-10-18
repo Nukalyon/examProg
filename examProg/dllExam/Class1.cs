@@ -14,7 +14,7 @@ namespace dllExam
         public byte nbBoxMonster = 0;
         public byte nbBoxAidKit = 0;
         public byte nbBoxEmpty = 0;
-        private byte hp = 0;
+        public byte hp = 0;
         string error = "";
 
         public enum NoBoxUsed

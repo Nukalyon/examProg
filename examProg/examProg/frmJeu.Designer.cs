@@ -68,6 +68,7 @@
             // 
             // txt_namePlayer
             // 
+            this.txt_namePlayer.Enabled = false;
             this.txt_namePlayer.Location = new System.Drawing.Point(3, 3);
             this.txt_namePlayer.Name = "txt_namePlayer";
             this.txt_namePlayer.Size = new System.Drawing.Size(130, 20);
@@ -82,6 +83,7 @@
             // 
             // txtb_currentLife
             // 
+            this.txtb_currentLife.Enabled = false;
             this.txtb_currentLife.Location = new System.Drawing.Point(47, 32);
             this.txtb_currentLife.Name = "txtb_currentLife";
             this.txtb_currentLife.Size = new System.Drawing.Size(46, 20);

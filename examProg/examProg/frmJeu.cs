@@ -8,9 +8,11 @@ namespace examProg
     {
         const ushort MOVE = 10;
         private frmInfos fenetreInfos = new frmInfos();
-        public frmJeu()
+        public frmJeu(string v, byte hp)
         {
             InitializeComponent();
+            txt_namePlayer.Text = v;
+            txtb_currentLife.Text = hp.ToString();
         }
 
         private void frmJeu_Load(object sender, EventArgs e)

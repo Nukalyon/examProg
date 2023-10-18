@@ -39,7 +39,7 @@ namespace examProg
                     if(CheckRdbChecked())
                     {
                         //Lancement du jeu
-                        frmJeu jeu = new frmJeu();
+                        frmJeu jeu = new frmJeu(config.getNomJoueur(), config.hp);
                         jeu.ShowDialog();
                     }
                     else
