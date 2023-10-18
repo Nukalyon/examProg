@@ -84,7 +84,7 @@
             // txtb_currentLife
             // 
             this.txtb_currentLife.Enabled = false;
-            this.txtb_currentLife.Location = new System.Drawing.Point(47, 32);
+            this.txtb_currentLife.Location = new System.Drawing.Point(87, 20);
             this.txtb_currentLife.Name = "txtb_currentLife";
             this.txtb_currentLife.Size = new System.Drawing.Size(46, 20);
             this.txtb_currentLife.TabIndex = 3;

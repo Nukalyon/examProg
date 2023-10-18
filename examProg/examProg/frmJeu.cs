@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dllExam;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,6 +8,7 @@ namespace examProg
     public partial class frmJeu : Form
     {
         const ushort MOVE = 10;
+        const ushort BOXES = 5;
         private frmInfos fenetreInfos = new frmInfos();
         public frmJeu(string v, byte hp)
         {
@@ -17,7 +19,17 @@ namespace examProg
 
         private void frmJeu_Load(object sender, EventArgs e)
         {
+            Joueur j = new Joueur(txt_namePlayer.Text);
+            for(int i = 0; i < BOXES; i++)
+            {
+                int x = 
+                CreateBox(x, y);
+            }
+        }
 
+        private void CreateBox()
+        {
+            throw new NotImplementedException();
         }
 
         private void frmJeu_KeyDown(object sender, KeyEventArgs e)
