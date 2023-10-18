@@ -22,14 +22,18 @@ namespace examProg
             Joueur j = new Joueur(txt_namePlayer.Text);
             for(int i = 0; i < BOXES; i++)
             {
-                int x = 
+                int x = new Random().Next(0, this.ClientSize.Width);
+                int y = new Random().Next(0, this.ClientSize.Height);
                 CreateBox(x, y);
             }
         }
 
-        private void CreateBox()
+        private void CreateBox(int x, int y)
         {
-            throw new NotImplementedException();
+            PictureBox pic = new PictureBox();
+            pic.Location = new Point(x, y);
+            pic.Image = Properties.Resources.box;
+            pic.Show();
         }
 
         private void frmJeu_KeyDown(object sender, KeyEventArgs e)
