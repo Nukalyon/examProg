@@ -63,6 +63,36 @@ namespace examProg.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aid {
+            get {
+                object obj = ResourceManager.GetObject("aid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap box {
+            get {
+                object obj = ResourceManager.GetObject("box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coeur {
+            get {
+                object obj = ResourceManager.GetObject("coeur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kid {
             get {
                 object obj = ResourceManager.GetObject("kid", resourceCulture);
@@ -76,6 +106,26 @@ namespace examProg.Properties {
         internal static System.Drawing.Bitmap kid1 {
             get {
                 object obj = ResourceManager.GetObject("kid1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monster {
+            get {
+                object obj = ResourceManager.GetObject("monster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_carton_box_clipart_design_illustration_9380341_257 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_carton-box-clipart-design-illustration_9380341_257", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
