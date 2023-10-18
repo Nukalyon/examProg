@@ -124,19 +124,20 @@ namespace dllExam
             }
         }
 
-        private bool Attacked()
+        public string Attacked()
         {
-            bool isAlive = true;
+            string isAlive = "";
             Random rand = new Random();
             byte degat = (byte)rand.Next(5,10);
             if(this.hp - degat < 0)
             {
                 this.hp = 0;
-                isAlive= false;
+                isAlive= "est mort";
             }
             else
             {
                 this.hp -= degat;
+                isAlive = "avec " + this.hp;
             }
             return isAlive;
         }
@@ -176,7 +177,7 @@ namespace dllExam
         private byte ronde = 1;
         private string events;
 
-        private void AddInformations(string s)
+        public void AddInformations(string s)
         {
             events += s + RETURN;
         }

@@ -1,5 +1,6 @@
 ﻿using dllExam;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,9 +8,11 @@ namespace examProg
 {
     public partial class frmJeu : Form
     {
-        const ushort MOVE = 10;
         const ushort BOXES = 5;
+        private Joueur j = null;
         private frmInfos fenetreInfos = new frmInfos();
+        private List<PictureBox> boxes = new List<PictureBox> ();
+
         public frmJeu(string v, byte hp)
         {
             InitializeComponent();
@@ -24,16 +27,16 @@ namespace examProg
             {
                 int x = new Random().Next(0, this.ClientSize.Width);
                 int y = new Random().Next(0, this.ClientSize.Height);
-                CreateBox(x, y);
+                boxes.Add(CreateBox(x, y));
             }
         }
 
-        private void CreateBox(int x, int y)
+        private PictureBox CreateBox(int x, int y)
         {
             PictureBox pic = new PictureBox();
             pic.Location = new Point(x, y);
             pic.Image = Properties.Resources.box;
-            pic.Show();
+            return pic;
         }
 
         private void frmJeu_KeyDown(object sender, KeyEventArgs e)
@@ -51,7 +54,7 @@ namespace examProg
 
             //MessageBox.Show(e.KeyCode.ToString());
 
-            //Place l'image devant le reste (hierarchie de creation)
+            //Place le panel devant le reste (hierarchie de creation)
             pnl_player.BringToFront();
             //Affiche la fenetre de logs
             fenetreInfos.Show();
@@ -62,31 +65,31 @@ namespace examProg
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    if (loc.X - MOVE >= 0)
+                    if (loc.X >= 0)
                     {
                         //picHumain.Left -= MOVE;
-                        loc = new Point(loc.X - MOVE, loc.Y);
+                        loc = new Point(loc.X, loc.Y);
                     }
                     break;
                 case Keys.Right:
-                    if (loc.X + MOVE + w < this.ClientSize.Width)
+                    if (loc.X + w < this.ClientSize.Width)
                     {
                         //picHumain.Left += MOVE;
-                        loc = new Point(loc.X + MOVE, loc.Y);
+                        loc = new Point(loc.X, loc.Y);
                     }
                     break;
                 case Keys.Up:
-                    if (loc.Y - MOVE >= 0)
+                    if (loc.Y >= 0)
                     {
                         //picHumain.Top -= MOVE;
-                        loc = new Point(loc.X, loc.Y - MOVE);
+                        loc = new Point(loc.X, loc.Y);
                     }
                     break;
                 case Keys.Down:
-                    if (loc.Y + MOVE + h < this.ClientSize.Height)
+                    if (loc.Y + h < this.ClientSize.Height)
                     {
                         //picHumain.Top += MOVE;
-                        loc = new Point(loc.X, loc.Y + MOVE);
+                        loc = new Point(loc.X, loc.Y);
                     }
                     break;
                 case Keys.Q:
@@ -101,21 +104,21 @@ namespace examProg
             if (pnl_player.Bounds.IntersectsWith(pictureBox1.Bounds))
             {
                 //Collision detectee
-                //pictureBox1.Image = Properties.Resources.def;
-                //fenetreInfos = j.Attack(CPU3) + RETURN;
+                pictureBox1.Image = Properties.Resources.monster;
+                //fenetreInfos = j.Attacked();
                 pnl_player.Left = humainX;
                 pnl_player.Top = humainY;
 
             }
             else
             {
-                pictureBox2.Image = Properties.Resources.box;
+                pictureBox1.Image = Properties.Resources.box;
             }
 
 
             if (pnl_player.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
-
+                pictureBox2.Image = Properties.Resources.monster;
                 pnl_player.Left = humainX;
                 pnl_player.Top = humainY;
             }
@@ -127,6 +130,7 @@ namespace examProg
 
             if (pnl_player.Bounds.IntersectsWith(pictureBox3.Bounds))
             {
+                pictureBox3.Image = Properties.Resources.monster;
                 pnl_player.Left = humainX;
                 pnl_player.Top = humainY;
             }
@@ -138,6 +142,7 @@ namespace examProg
 
             if (pnl_player.Bounds.IntersectsWith(pictureBox4.Bounds))
             {
+                pictureBox4.Image = Properties.Resources.monster;
                 pnl_player.Left = humainX;
                 pnl_player.Top = humainY;
             }
@@ -149,6 +154,7 @@ namespace examProg
 
             if (pnl_player.Bounds.IntersectsWith(pictureBox5.Bounds))
             {
+                pictureBox5.Image = Properties.Resources.monster;
                 pnl_player.Left = humainX;
                 pnl_player.Top = humainY;
             }

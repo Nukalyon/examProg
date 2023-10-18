@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dllExam;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace examProg
 {
     public partial class frmInfos : Form
     {
+        private Informations infos = new Informations();
         public frmInfos()
         {
             InitializeComponent();

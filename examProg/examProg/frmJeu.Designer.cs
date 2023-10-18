@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.pnl_player = new System.Windows.Forms.Panel();
-            this.txt_namePlayer = new System.Windows.Forms.TextBox();
-            this.prgb_life = new System.Windows.Forms.ProgressBar();
             this.txtb_currentLife = new System.Windows.Forms.TextBox();
+            this.prgb_life = new System.Windows.Forms.ProgressBar();
+            this.txt_namePlayer = new System.Windows.Forms.TextBox();
+            this.pic_player = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic_heart3 = new System.Windows.Forms.PictureBox();
             this.pic_heart2 = new System.Windows.Forms.PictureBox();
@@ -41,8 +42,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pic_player = new System.Windows.Forms.PictureBox();
             this.pnl_player.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_player)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_heart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_heart2)).BeginInit();
@@ -52,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_player)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_player
@@ -66,13 +66,13 @@
             this.pnl_player.Size = new System.Drawing.Size(136, 159);
             this.pnl_player.TabIndex = 1;
             // 
-            // txt_namePlayer
+            // txtb_currentLife
             // 
-            this.txt_namePlayer.Enabled = false;
-            this.txt_namePlayer.Location = new System.Drawing.Point(3, 3);
-            this.txt_namePlayer.Name = "txt_namePlayer";
-            this.txt_namePlayer.Size = new System.Drawing.Size(130, 20);
-            this.txt_namePlayer.TabIndex = 1;
+            this.txtb_currentLife.Enabled = false;
+            this.txtb_currentLife.Location = new System.Drawing.Point(87, 20);
+            this.txtb_currentLife.Name = "txtb_currentLife";
+            this.txtb_currentLife.Size = new System.Drawing.Size(46, 20);
+            this.txtb_currentLife.TabIndex = 3;
             // 
             // prgb_life
             // 
@@ -81,13 +81,24 @@
             this.prgb_life.Size = new System.Drawing.Size(130, 20);
             this.prgb_life.TabIndex = 2;
             // 
-            // txtb_currentLife
+            // txt_namePlayer
             // 
-            this.txtb_currentLife.Enabled = false;
-            this.txtb_currentLife.Location = new System.Drawing.Point(87, 20);
-            this.txtb_currentLife.Name = "txtb_currentLife";
-            this.txtb_currentLife.Size = new System.Drawing.Size(46, 20);
-            this.txtb_currentLife.TabIndex = 3;
+            this.txt_namePlayer.Enabled = false;
+            this.txt_namePlayer.Location = new System.Drawing.Point(3, 3);
+            this.txt_namePlayer.Name = "txt_namePlayer";
+            this.txt_namePlayer.Size = new System.Drawing.Size(130, 20);
+            this.txt_namePlayer.TabIndex = 1;
+            // 
+            // pic_player
+            // 
+            this.pic_player.Image = global::examProg.Properties.Resources.kid1;
+            this.pic_player.InitialImage = global::examProg.Properties.Resources.kid1;
+            this.pic_player.Location = new System.Drawing.Point(3, 58);
+            this.pic_player.Name = "pic_player";
+            this.pic_player.Size = new System.Drawing.Size(130, 98);
+            this.pic_player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_player.TabIndex = 0;
+            this.pic_player.TabStop = false;
             // 
             // panel1
             // 
@@ -179,17 +190,6 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
-            // pic_player
-            // 
-            this.pic_player.Image = global::examProg.Properties.Resources.kid1;
-            this.pic_player.InitialImage = global::examProg.Properties.Resources.kid1;
-            this.pic_player.Location = new System.Drawing.Point(3, 58);
-            this.pic_player.Name = "pic_player";
-            this.pic_player.Size = new System.Drawing.Size(130, 98);
-            this.pic_player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_player.TabIndex = 0;
-            this.pic_player.TabStop = false;
-            // 
             // frmJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,8 +208,10 @@
             this.Name = "frmJeu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmJeu_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmJeu_KeyDown);
             this.pnl_player.ResumeLayout(false);
             this.pnl_player.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_player)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_heart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_heart2)).EndInit();
@@ -219,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_player)).EndInit();
             this.ResumeLayout(false);
 
         }
