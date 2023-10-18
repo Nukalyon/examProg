@@ -6,7 +6,6 @@ namespace examProg
     public partial class frmConfig : Form
     {
         string ERREURVALIDATION = "";
-        const byte MAXCHARNAME = 15;
         public frmConfig()
         {
             InitializeComponent();
@@ -16,9 +15,6 @@ namespace examProg
         {
             try
             {
-                //IsNameEmptyOrMaxed();
-                //CountBoxes();
-                //CheckEnergie();
                 frmJeu jeu = new frmJeu();
                 jeu.ShowDialog();
 
@@ -35,20 +31,7 @@ namespace examProg
         private bool CheckEnergie()
         {
             bool res = true;
-            byte energie = 0;
-            try
-            {
-                byte.TryParse(txtb_energie.Text.Trim(), out energie);
-                if(energie < 5 || energie > 40)
-                {
-                    res = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                ERREURVALIDATION = "Energie : [5;40]";
-                throw new Exception(ERREURVALIDATION, ex);
-            }
+            
             return res;
         }
 
@@ -89,19 +72,6 @@ namespace examProg
                 throw new Exception(ERREURVALIDATION, ex);
             }
             return boxes;
-        }
-
-        private bool IsNameEmptyOrMaxed()
-        {
-            bool res = false;
-            //regarde si le nom est vide en retirant les espaces superflus et si la 
-            //longueur du text est inférieure à MAXCHARNAME
-            string name = txtb_nom.Text.Trim();
-            if (name.Length == 0 || name.Length >= MAXCHARNAME)
-            {
-                res = true;
-            }
-            return res;
         }
     }
 }
