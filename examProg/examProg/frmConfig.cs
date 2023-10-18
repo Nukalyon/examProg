@@ -16,9 +16,12 @@ namespace examProg
         {
             try
             {
-                IsNameEmptyOrMaxed();
-                CountBoxes();
-                CheckEnergie();
+                //IsNameEmptyOrMaxed();
+                //CountBoxes();
+                //CheckEnergie();
+                frmJeu jeu = new frmJeu();
+                jeu.ShowDialog();
+
             }
             catch(Exception ex)
             {
@@ -27,8 +30,6 @@ namespace examProg
                     Console.WriteLine("Détails: " + ex.InnerException.Message);
                 }
             }
-            Console.WriteLine("Exit Program");
-            Console.ReadKey();
         }
 
         private bool CheckEnergie()

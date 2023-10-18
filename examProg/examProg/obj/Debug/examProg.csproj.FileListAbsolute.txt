@@ -9,3 +9,4 @@ D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.GenerateResource.
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.csproj.CoreCompileInputs.cache
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.exe
 D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.pdb
+D:\GitHub\examProg\examProg\examProg\obj\Debug\examProg.frmJeu.resources
